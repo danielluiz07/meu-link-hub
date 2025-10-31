@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api/links';
+const API_URL = 'https://meu-link-hub-api.onrender.com/api/links';
 
 // Seleciona os elementos do HTML
 const form = document.getElementById('add-link-form');
