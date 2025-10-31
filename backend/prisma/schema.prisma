@@ -1,7 +1,7 @@
 // Define o provedor do banco de dados (MongoDB)
 datasource db {
   provider = "mongodb"
-  url      = env("DATABASE_URL") 
+  url      = env("DATABASE_URL") // Puxa do arquivo .env
 }
 
 // Define o "motor" que o Prisma usará
@@ -14,6 +14,6 @@ model Link {
   id          String    @id @default(auto()) @map("_id") @db.ObjectId
   title       String
   url         String
-  description String?   
+  description String?   // '?' torna opcional
   createdAt   DateTime  @default(now())
 }
