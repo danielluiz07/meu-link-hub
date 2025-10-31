@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Link Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Meu Link Hub</h1>
+        <p>Seu gerenciador de links pessoal.</p>
+    </header>
+
+    <main>
+        <section class="form-container">
+            <h2>Adicionar Novo Link</h2>
+            <form id="add-link-form">
+                <div class="form-group">
+                    <label for="link-title">Título</label>
+                    <input type="text" id="link-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="link-url">URL</label>
+                    <input type="url" id="link-url" placeholder="https://..." required>
+                </div>
+                <div class="form-group">
+                    <label for="link-desc">Descrição (Opcional)</label>
+                    <textarea id="link-desc" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Salvar Link</button>
+            </form>
+        </section>
+
+        <section class="links-container">
+            <h2>Links Salvos</h2>
+            <div id="link-list">
+                <p id="loading-message">Carregando links...</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

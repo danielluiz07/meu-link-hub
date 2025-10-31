@@ -1,0 +1,19 @@
+// Define o provedor do banco de dados (MongoDB)
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL") 
+}
+
+// Define o "motor" que o Prisma usará
+generator client {
+  provider = "prisma-client-js"
+}
+
+// Nosso modelo de dados para um Link
+model Link {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  url         String
+  description String?   
+  createdAt   DateTime  @default(now())
+}
